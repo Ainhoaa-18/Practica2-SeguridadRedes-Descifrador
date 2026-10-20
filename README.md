@@ -16,7 +16,7 @@ Para ejecutar ambos programas (tanto el de python como el de go) usar:
 
 ```bash
 ./fuerzaBruta.py 
-./fuerzaBruta.go
+./fuerzaBruta.go //cambiar esto
 ```
 
 ## 3.Decisiones de diseño
