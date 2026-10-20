@@ -28,5 +28,14 @@ Para probarlo se han usado los dos lenguajes de programación que resultan mas s
 
 -**Función descifradorClave**: Llama al generador de contraseñas y comprueba si se ha encontrado la contraseña y si debe parar los hilos antes de seguir llamando al generador.
 
-## 4.Comparativa de tecnologías.
+## 4. Solución más rápida
+Se ha realizado la prueba para encontrar la contraseña mediante el uso de hilos. Concretamente se han aplicado 3 pruebas: con 4, 9 y 16 hilos. Los resultados obtenidos han sido:
+
+| Hilos | Tiempo empleado (Python) | Tiempo empleado (Go) |
+|:---:|:---:|:---:|
+| 4  | ... | ... |
+| 9  | ... | ... |
+| 16 | 1h 15min 11s| ... |
+
+## 5.Comparativa de tecnologías.
 Comparando python con go tenemos:
