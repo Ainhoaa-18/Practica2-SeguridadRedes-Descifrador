@@ -31,11 +31,11 @@ Para probarlo se han usado los dos lenguajes de programación que resultan mas s
 ## 4. Solución más rápida
 Se ha realizado la prueba para encontrar la contraseña mediante el uso de hilos. Concretamente se han aplicado 3 pruebas: con 4, 9 y 16 hilos. Los resultados obtenidos han sido:
 
-| Hilos | Tiempo empleado (Python) | Tiempo empleado (Go) |
-|:---:|:---:|:---:|
-| 4  | ... | ... |
-| 9  | ... | ... |
-| 16 | 1h 15min 11s| ... |
+| Hilos | Tiempo empleado (Python) | Tiempo empleado (Go) | Intento (Python) | Intento (Go) |
+|:---:|:---:|:---:||:---:||:---:|
+| 4  | 2h 49min 42s | ... || 80159 || ... |
+| 9  | 1h 15min 11s | ... || 89961 || ... |
+| 16 | ... | ... || ... || ... |
 
 ## 5.Comparativa de tecnologías.
 Comparando python con go tenemos:
