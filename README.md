@@ -12,12 +12,13 @@ Para ejecutar el programa en python tenemos que abrir un entorno venv para que n
 ```
 
 ## 2.Ejecución del programa
-Para ejecutar ambos programas (tanto el de python como el de go) usar:
+Para ejecutar el programa usar:
 
 ```bash
 ./fuerzaBruta.py 
-./fuerzaBruta.go //cambiar esto
+
 ```
+Es importante, antes de ejecutar dicho comando, haber activado el venv que se define en el punto 1.
 
 ## 3.Decisiones de diseño
 Para probarlo se han usado los dos lenguajes de programación que resultan mas simple para un algoritmo de descifrado usando gpg, pyhton y go. La estructura con la que cuenta este algoritmo es:
@@ -28,14 +29,14 @@ Para probarlo se han usado los dos lenguajes de programación que resultan mas s
 
 -**Función descifradorClave**: Llama al generador de contraseñas y comprueba si se ha encontrado la contraseña y si debe parar los hilos antes de seguir llamando al generador.
 
-## 4. Solución más rápida
-Se ha realizado la prueba para encontrar la contraseña mediante el uso de hilos. Concretamente se han aplicado 3 pruebas: con 4, 9 y 16 hilos. Los resultados obtenidos han sido:
+## 4. Pruebas en la ejecución
+Se ha realizado la prueba para encontrar la contraseña mediante el uso de hilos para mayor concurrencia y unos tiempos más pequeños y óptimos. Concretamente se han aplicado 3 pruebas: con 4, 9 y 16 hilos. Los resultados obtenidos han sido:
 
-| Hilos | Tiempo empleado (Python) | Tiempo empleado (Go) | Intento (Python) | Intento (Go) |
-|:-----:|:------------------------:|:--------------------:|:----------------:|:-------------:|
-| 4     | 2h 49min 42s             | ...                  | 80159            | ...           |
-| 9     | 1h 15min 11s             | ...                  | 89961            | ...           |
-| 16    | ...                      | ...                  | ...              | ...           |
+| Hilos | Tiempo empleado (Python) | Intento (Python) |
+|:-----:|:------------------------:|:----------------:|
+| 4     | 2h 49min 42s             | 80159            |
+| 9     | 1h 15min 11s             | 89961            |
+| 16    | 1h 9min 28s              | 90274            |
 
-## 5.Comparativa de tecnologías.
-Comparando python con go tenemos:
+## 5.Conclusiones
+Se selecciono un numero de hilos adecuado al tamaño del problema (es decir, seleccione 9 para que haya un reparto de 3 letras por hilo ya que contamos con 27 letras). A partir de ahí se probo con diferentes números de hilos, concretamente 4 y 16, para probar con un numero inferior y superior a 9 hilos. Observando la tabla anterior, como resultado podemos concluir que, aunque por una diferencia de tiempo muy pequeña, gana la opción de 16 hilos, encontrando la contraseña en un tiempo eficiente de 1h 9min y 28s. El número de intentos en comparación con 9 hilos también es pequeño, pero en el caso de 16 podemos ver que se encuentra en más intentos pero menos tiempo, por lo que en el caso de 16 hemos sido capaces de crear muchos más intentos de contraseñas en un tiempo menor
