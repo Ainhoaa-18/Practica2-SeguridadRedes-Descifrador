@@ -21,7 +21,7 @@ Para ejecutar el programa usar:
 Es importante, antes de ejecutar dicho comando, haber activado el venv que se define en el punto 1.
 
 ## 3.Decisiones de diseño
-Para probarlo se han usado los dos lenguajes de programación que resultan mas simple para un algoritmo de descifrado usando gpg, pyhton y go. La estructura con la que cuenta este algoritmo es:
+Para probarlo se han usado python al ser un lenguaje fácil que permite crear un algoritmo de fuerza bruta de una manera muy sencilla para descifrar archivos gpg. La estructura con la que cuenta este algoritmo es:
 
 -**Función generar contraseña**: Reparte tramos entre hilos para no repetir combinaciones y genera las contraseñas a ser probadas mediante fuerza bruta
 
@@ -39,4 +39,4 @@ Se ha realizado la prueba para encontrar la contraseña mediante el uso de hilos
 | 16    | 1h 9min 28s              | 90274            |
 
 ## 5.Conclusiones
-Se selecciono un numero de hilos adecuado al tamaño del problema (es decir, seleccione 9 para que haya un reparto de 3 letras por hilo ya que contamos con 27 letras). A partir de ahí se probo con diferentes números de hilos, concretamente 4 y 16, para probar con un numero inferior y superior a 9 hilos. Observando la tabla anterior, como resultado podemos concluir que, aunque por una diferencia de tiempo muy pequeña, gana la opción de 16 hilos, encontrando la contraseña en un tiempo eficiente de 1h 9min y 28s. El número de intentos en comparación con 9 hilos también es pequeño, pero en el caso de 16 podemos ver que se encuentra en más intentos pero menos tiempo, por lo que en el caso de 16 hemos sido capaces de crear muchos más intentos de contraseñas en un tiempo menor
+Se selecciono un numero de hilos adecuado al tamaño del problema (es decir, seleccione 9 para que haya un reparto de 3 letras por hilo ya que contamos con 27 letras). A partir de ahí se probo con diferentes números de hilos, concretamente 4 y 16, para probar con un numero inferior y superior a 9 hilos. Observando la tabla anterior, como resultado podemos concluir que, aunque por una diferencia de tiempo muy pequeña, gana la opción de 16 hilos, encontrando la contraseña en un tiempo eficiente de 1h 9min y 28s. El número de intentos en comparación con 9 hilos también es pequeño, pero en el caso de 16 podemos ver que se encuentra en más intentos pero menos tiempo, por lo que en el caso de 16 hemos sido capaces de crear muchos más intentos de contraseñas en un tiempo menor.
